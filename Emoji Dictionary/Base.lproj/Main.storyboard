@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="932" y="43.628185907046479"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="9MW-0m-Zwu">
             <objects>
-                <viewController id="TNd-i3-qmG" sceneMemberID="viewController">
+                <viewController id="TNd-i3-qmG" customClass="DefinitionViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B9S-Pu-gSM"/>
                         <viewControllerLayoutGuide type="bottom" id="XKj-iT-jsW"/>
@@ -57,13 +57,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛪️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW4-fk-dsL">
-                                <rect key="frame" x="89.5" y="60" width="196" height="215"/>
+                                <rect key="frame" x="89.5" y="104" width="196" height="215"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="180"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church. People pray in it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-Xa-sBm">
-                                <rect key="frame" x="37.5" y="325" width="300" height="21"/>
+                                <rect key="frame" x="37.5" y="369" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,6 +77,10 @@
                             <constraint firstItem="nb6-Xa-sBm" firstAttribute="top" secondItem="pW4-fk-dsL" secondAttribute="bottom" constant="50" id="bK0-Of-1iq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="defLabel" destination="nb6-Xa-sBm" id="QdW-ZC-X7C"/>
+                        <outlet property="emojiLabel" destination="pW4-fk-dsL" id="Z6z-6l-Jxa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXY-V0-dlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +89,7 @@
         <!--Navigation Controller-->
         <scene sceneID="W9l-gr-Fbk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peC-No-HdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thW-Dn-xOn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3B4-7j-VKp">
@@ -96,7 +101,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7yx-fN-qNS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="peC-No-HdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7.2000000000000002" y="43.628185907046479"/>
         </scene>
