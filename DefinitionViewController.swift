@@ -10,6 +10,8 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
 
+    @IBOutlet weak var birthLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var defLabel: UILabel!
     
@@ -20,24 +22,6 @@ class DefinitionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         emojiLabel.text = emoji
-        
-        if emoji == "😄" {
-        defLabel.text = "A happy face"
-        } else if emoji == "😘" {
-            defLabel.text = "A kissy face"
-        } else if emoji == "😆" {
-            defLabel.text = "Laughing really hard"
-        } else if emoji == "💩" {
-            defLabel.text = "A poop face"
-        } else if emoji == "😂" {
-            defLabel.text = "My favorite laughing my ass off emoji"
-        } else if emoji == "😋" {
-            defLabel.text = "I'm probably hungry"
-        } else if emoji == "💃" {
-            defLabel.text = "A correct representation of me"
-        } else if emoji == "🐹"{
-            defLabel.text = "A cute hamster"
-        }
         
     }
 

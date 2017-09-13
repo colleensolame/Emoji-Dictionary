@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3K7-aV-v79">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="370" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -53,17 +53,29 @@
                         <viewControllerLayoutGuide type="bottom" id="XKj-iT-jsW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L9g-1L-wEK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛪️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW4-fk-dsL">
-                                <rect key="frame" x="89.5" y="104" width="196" height="215"/>
+                                <rect key="frame" x="87" y="104" width="196" height="215"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="180"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church. People pray in it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-Xa-sBm">
-                                <rect key="frame" x="37.5" y="369" width="300" height="21"/>
+                                <rect key="frame" x="35" y="369" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6J-zV-sSE">
+                                <rect key="frame" x="117.5" y="410" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nD-lz-bQa">
+                                <rect key="frame" x="124" y="451" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,12 +84,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pW4-fk-dsL" firstAttribute="centerX" secondItem="L9g-1L-wEK" secondAttribute="centerX" id="3e9-nF-wep"/>
+                            <constraint firstItem="9nD-lz-bQa" firstAttribute="top" secondItem="S6J-zV-sSE" secondAttribute="bottom" constant="20" id="Inz-aB-wvN"/>
                             <constraint firstItem="nb6-Xa-sBm" firstAttribute="centerX" secondItem="L9g-1L-wEK" secondAttribute="centerX" id="Ji8-MC-E9s"/>
+                            <constraint firstItem="S6J-zV-sSE" firstAttribute="centerX" secondItem="L9g-1L-wEK" secondAttribute="centerX" id="MIn-Jc-J9g"/>
+                            <constraint firstItem="S6J-zV-sSE" firstAttribute="top" secondItem="nb6-Xa-sBm" secondAttribute="bottom" constant="20" id="TXL-Vn-V47"/>
                             <constraint firstItem="pW4-fk-dsL" firstAttribute="top" secondItem="B9S-Pu-gSM" secondAttribute="bottom" constant="40" id="W6V-oQ-5Kw"/>
                             <constraint firstItem="nb6-Xa-sBm" firstAttribute="top" secondItem="pW4-fk-dsL" secondAttribute="bottom" constant="50" id="bK0-Of-1iq"/>
+                            <constraint firstItem="9nD-lz-bQa" firstAttribute="centerX" secondItem="L9g-1L-wEK" secondAttribute="centerX" id="x7g-ub-cNa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="9nD-lz-bQa" id="2gd-1E-BXh"/>
+                        <outlet property="categoryLabel" destination="S6J-zV-sSE" id="rXM-ud-4dd"/>
                         <outlet property="defLabel" destination="nb6-Xa-sBm" id="QdW-ZC-X7C"/>
                         <outlet property="emojiLabel" destination="pW4-fk-dsL" id="Z6z-6l-Jxa"/>
                     </connections>
@@ -89,9 +107,10 @@
         <!--Navigation Controller-->
         <scene sceneID="W9l-gr-Fbk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="peC-No-HdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thW-Dn-xOn" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="370" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3B4-7j-VKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,8 +120,9 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7yx-fN-qNS"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peC-No-HdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="43.628185907046479"/>
+            <point key="canvasLocation" x="479" y="44"/>
         </scene>
     </scenes>
 </document>
