@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dfVC = segue.destination as! DefinitionViewController
-        dfVC.emoji = sender as! String
+        dfVC.emoji = sender as! Emoji
     }
     
     override func didReceiveMemoryWarning() {
